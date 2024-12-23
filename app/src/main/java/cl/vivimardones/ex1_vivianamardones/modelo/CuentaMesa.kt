@@ -21,10 +21,6 @@ class CuentaMesa() {
         items.add(itemMesa)
     }
 
-    fun agregarItem(itemMesa: ItemMesa) {
-        items.add(itemMesa)
-    }
-
     fun calcularTotalSinPropina(): Float {
         return items.sumByDouble { it.calcularSubtotal().toDouble() }.toFloat()
     }
@@ -36,24 +32,9 @@ class CuentaMesa() {
     fun calcularTotalConPropina(): Float {
         return calcularTotalSinPropina() + calcularPropina()
     }
+
     fun formatearMoneda(valor: Float): String {
         val formatoCLP = NumberFormat.getCurrencyInstance(Locale("es", "CL"))
         return formatoCLP.format(valor)
     }
-}
-
-// Método Main para probar la funcionalidad
-fun main() {
-    val item1 = ItemMenu("Hamburguesa", 5.0f)
-    val item2 = ItemMenu("Papas Fritas", 3.0f)
-    val item3 = ItemMenu("Coca Cola", 2.0f)
-
-    val cuenta = CuentaMesa()
-    cuenta.agregarItem(item1, 2) // 2 Hamburguesas
-    cuenta.agregarItem(item2, 3) // 3 Papas Fritas
-    cuenta.agregarItem(item3, 1) // 1 Coca Cola
-
-    println("Total sin propina: ${cuenta.calcularTotalSinPropina()}")
-    println("Propina: ${cuenta.calcularPropina()}")
-    println("Total con propina: ${cuenta.calcularTotalConPropina()}")
 }
