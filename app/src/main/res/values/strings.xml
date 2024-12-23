@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ex1_vivianaMardones</string>
+    <string name="tvItem1">Pastel de Choclo</string>
+    <string name="tvItem2">Cazuela</string>
+    <string name="tvCant">Cant.</string>
+    <string name="etCant">1</string>
+    <string name="tvPrecioItem1">$36.000</string>
+    <string name="tvPrecioItem2">$10.000</string>
+    <string name="tvTotalComida">Comida</string>
+    <string name="tvTotalPropina">Propina</string>
+    <string name="tvTotal">TOTAL</string>
+</resources>
